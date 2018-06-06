@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import axios from 'axios';
+import axios from 'axios'
 
 export default {
   name: 'QiitaArticles',
@@ -23,8 +23,7 @@ export default {
     getArticlesFromQiita () {
       let self = this
       // 記事を取得する
-      axios.get('https://qiita.com/api/v2/items?page=1&per_page=20')
-      .then(function (response) {
+      axios.get('https://qiita.com/api/v2/items?page=1&per_page=20').then(function (response) {
         self.articles = response.data
       }).catch(function (err) {
         alert(err.message)
